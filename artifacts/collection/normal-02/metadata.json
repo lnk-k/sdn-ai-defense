@@ -1,0 +1,21 @@
+{
+  "id": "normal-02",
+  "source": "real-mininet",
+  "scenario": "normal",
+  "method": "off",
+  "seed": 102,
+  "duration": 18,
+  "bottleneck_mbps": 10,
+  "poll_seconds": 1,
+  "status": "completed",
+  "traffic": {
+    "pps": 503,
+    "payload_bytes": 1200,
+    "ping_interval": 0.002
+  },
+  "started": 1790062260.446459,
+  "scenario_started": 1790062264.449862,
+  "scenario_ended": 1790062274.2230358,
+  "ended": 1790062279.4351504,
+  "split": "train"
+}

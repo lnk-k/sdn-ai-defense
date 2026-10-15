@@ -1,0 +1,20 @@
+{
+  "id": "icmp-rf-01",
+  "source": "real-mininet",
+  "scenario": "icmp",
+  "method": "rf",
+  "seed": 901,
+  "duration": 26,
+  "bottleneck_mbps": 10,
+  "poll_seconds": 1,
+  "status": "completed",
+  "traffic": {
+    "pps": 1083,
+    "payload_bytes": 1200,
+    "ping_interval": 0.001
+  },
+  "started": 1790090485.7870216,
+  "scenario_started": 1790090492.798322,
+  "scenario_ended": 1790090506.5916386,
+  "ended": 1790090512.8321087
+}

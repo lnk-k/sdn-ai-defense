@@ -1,0 +1,10 @@
+{"time": 1790062094.4247572, "kind": "switch_connected", "dpid": 1}
+{"time": 1790062094.4364245, "kind": "switch_connected", "dpid": 2}
+{"time": 1790062104.0794945, "kind": "block_requested", "src": "10.0.0.3", "protocol": 17, "score": 1.0}
+{"time": 1790062104.0816116, "kind": "rule_ack", "src": "10.0.0.3", "protocol": 17, "seconds": 10}
+{"time": 1790062105.084498, "kind": "drop_observed", "src": "10.0.0.3", "protocol": 17, "dropped_packets": 4760}
+{"time": 1790062113.876543, "kind": "rule_expired", "src": "10.0.0.3", "protocol": 17, "dropped_packets": 63060}
+{"time": 1790062115.8563094, "kind": "block_requested", "src": "10.0.0.3", "protocol": 17, "score": 1.0}
+{"time": 1790062115.8578906, "kind": "rule_ack", "src": "10.0.0.3", "protocol": 17, "seconds": 10}
+{"time": 1790062116.8608565, "kind": "drop_observed", "src": "10.0.0.3", "protocol": 17, "dropped_packets": 2900}
+{"time": 1790062121.9132087, "kind": "rule_expired", "src": "10.0.0.3", "protocol": 17, "dropped_packets": 2900}

@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/Users/kk/Documents/ChatGPT/课程设计/sdn-ai-defense/sdn_defense/run_controller.py", line 26, in <module>
+    main()
+  File "/Users/kk/Documents/ChatGPT/课程设计/sdn-ai-defense/sdn_defense/run_controller.py", line 16, in main
+    from os_ken.controller import controller  # 注册 OpenFlow 配置选项。
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kk/Documents/ChatGPT/课程设计/sdn-ai-defense/.venv-linux/lib/python3.12/site-packages/os_ken/controller/controller.py", line 38, in <module>
+    import os_ken.base.app_manager
+  File "/Users/kk/Documents/ChatGPT/课程设计/sdn-ai-defense/.venv-linux/lib/python3.12/site-packages/os_ken/base/app_manager.py", line 36, in <module>
+    from os_ken.controller.controller import Datapath
+ImportError: cannot import name 'Datapath' from partially initialized module 'os_ken.controller.controller' (most likely due to a circular import) (/Users/kk/Documents/ChatGPT/课程设计/sdn-ai-defense/.venv-linux/lib/python3.12/site-packages/os_ken/controller/controller.py)

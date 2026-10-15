@@ -1,0 +1,20 @@
+{
+  "checked_at": "2026-09-22T23:27:35.242907+08:00",
+  "passed": true,
+  "counts": {
+    "collection": 18,
+    "benchmark": 18
+  },
+  "errors": [],
+  "performance_findings": [
+    "icmp-rf-01: 非目标或场景外封禁 1 次，保留在结果表中",
+    "icmp-threshold-00: 未确认丢弃，保留漏检结果",
+    "icmp-threshold-01: 非目标或场景外封禁 1 次，保留在结果表中",
+    "icmp-threshold-01: 未确认丢弃，保留漏检结果",
+    "normal-threshold-00: 非目标或场景外封禁 2 次，保留在结果表中",
+    "normal-threshold-01: 非目标或场景外封禁 3 次，保留在结果表中",
+    "udp-rf-00: 非目标或场景外封禁 1 次，保留在结果表中",
+    "udp-rf-01: 非目标或场景外封禁 1 次，保留在结果表中"
+  ],
+  "note": "passed 仅表示原始证据完整且一致；性能不足单列，不隐藏误封、漏检或调整模型。仅验证课设实验范围。"
+}

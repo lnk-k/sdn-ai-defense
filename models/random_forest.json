@@ -1,0 +1,93 @@
+{
+  "source": "real-mininet",
+  "schema": 1,
+  "features": [
+    "packet_rate",
+    "byte_rate",
+    "mean_packet_bytes",
+    "is_icmp",
+    "is_tcp",
+    "is_udp"
+  ],
+  "groups": {
+    "train": [
+      "icmp-00",
+      "icmp-01",
+      "icmp-02",
+      "icmp-03",
+      "normal-00",
+      "normal-01",
+      "normal-02",
+      "normal-03",
+      "udp-00",
+      "udp-01",
+      "udp-02",
+      "udp-03"
+    ],
+    "validation": [
+      "icmp-04",
+      "normal-04",
+      "udp-04"
+    ],
+    "test": [
+      "icmp-05",
+      "normal-05",
+      "udp-05"
+    ]
+  },
+  "sample_counts": {
+    "train": 543,
+    "validation": 136,
+    "test": 136
+  },
+  "probability_threshold": 0.5,
+  "threshold_pps": 500,
+  "limitations": "同一固定拓扑的受控已知攻击；不代表互联网未知攻击泛化能力。",
+  "threshold": {
+    "accuracy": 0.8602941176470589,
+    "precision": 0.3684210526315789,
+    "recall": 0.5,
+    "f1": 0.42424242424242425,
+    "false_positive_rate": 0.09836065573770492,
+    "confusion_matrix": [
+      [
+        110,
+        12
+      ],
+      [
+        7,
+        7
+      ]
+    ],
+    "inference_mean_ms": 9.429411764705882e-05,
+    "inference_p95_ms": 0.000125
+  },
+  "rf": {
+    "accuracy": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "false_positive_rate": 0.0,
+    "confusion_matrix": [
+      [
+        122,
+        0
+      ],
+      [
+        0,
+        14
+      ]
+    ],
+    "inference_mean_ms": 0.9395245588235294,
+    "inference_p95_ms": 0.97734375
+  },
+  "feature_importance": {
+    "packet_rate": 0.28549932733129646,
+    "byte_rate": 0.16696838328848976,
+    "mean_packet_bytes": 0.35034126347125566,
+    "is_icmp": 0.052635374224359294,
+    "is_tcp": 0.11148840937828303,
+    "is_udp": 0.033067242306315824
+  },
+  "dataset_sha256": "05d5767530f33b3c2c2724847c84d65373e950b569e07ce8d265d04832b87857"
+}

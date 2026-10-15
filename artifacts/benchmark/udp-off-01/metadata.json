@@ -1,0 +1,20 @@
+{
+  "id": "udp-off-01",
+  "source": "real-mininet",
+  "scenario": "udp",
+  "method": "off",
+  "seed": 901,
+  "duration": 26,
+  "bottleneck_mbps": 10,
+  "poll_seconds": 1,
+  "status": "completed",
+  "traffic": {
+    "pps": 5266,
+    "payload_bytes": 256,
+    "ping_interval": 0.0005
+  },
+  "started": 1790090456.9656982,
+  "scenario_started": 1790090463.86906,
+  "scenario_ended": 1790090477.770117,
+  "ended": 1790090483.9092102
+}

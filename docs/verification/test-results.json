@@ -1,0 +1,26 @@
+{
+  "checked_at": "2026-09-22T23:28:20.394326+08:00",
+  "macos": {
+    "command": ".venv/bin/python -m pytest -q",
+    "result": "12 passed in 0.12s"
+  },
+  "linux": {
+    "command": ".venv-linux/bin/python -m pytest -q",
+    "result": "12 passed in 0.15s"
+  },
+  "browser": {
+    "widths_checked": [
+      390,
+      900,
+      1280
+    ],
+    "horizontal_overflow": false,
+    "console_errors": [],
+    "verified": [
+      "实验切换",
+      "时间轴",
+      "回放",
+      "真实结果表格"
+    ]
+  }
+}

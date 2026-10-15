@@ -1,0 +1,21 @@
+{
+  "id": "icmp-04",
+  "source": "real-mininet",
+  "scenario": "icmp",
+  "method": "off",
+  "seed": 104,
+  "duration": 18,
+  "bottleneck_mbps": 10,
+  "poll_seconds": 1,
+  "status": "completed",
+  "traffic": {
+    "pps": 240,
+    "payload_bytes": 512,
+    "ping_interval": 0.002
+  },
+  "started": 1790062400.6227312,
+  "scenario_started": 1790062404.629593,
+  "scenario_ended": 1790062414.398189,
+  "ended": 1790062419.3827474,
+  "split": "validation"
+}

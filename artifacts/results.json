@@ -1,0 +1,748 @@
+{
+  "source": "real-mininet",
+  "classifier": {
+    "source": "real-mininet",
+    "schema": 1,
+    "features": [
+      "packet_rate",
+      "byte_rate",
+      "mean_packet_bytes",
+      "is_icmp",
+      "is_tcp",
+      "is_udp"
+    ],
+    "groups": {
+      "train": [
+        "icmp-00",
+        "icmp-01",
+        "icmp-02",
+        "icmp-03",
+        "normal-00",
+        "normal-01",
+        "normal-02",
+        "normal-03",
+        "udp-00",
+        "udp-01",
+        "udp-02",
+        "udp-03"
+      ],
+      "validation": [
+        "icmp-04",
+        "normal-04",
+        "udp-04"
+      ],
+      "test": [
+        "icmp-05",
+        "normal-05",
+        "udp-05"
+      ]
+    },
+    "sample_counts": {
+      "train": 543,
+      "validation": 136,
+      "test": 136
+    },
+    "probability_threshold": 0.5,
+    "threshold_pps": 500,
+    "limitations": "同一固定拓扑的受控已知攻击；不代表互联网未知攻击泛化能力。",
+    "threshold": {
+      "accuracy": 0.8602941176470589,
+      "precision": 0.3684210526315789,
+      "recall": 0.5,
+      "f1": 0.42424242424242425,
+      "false_positive_rate": 0.09836065573770492,
+      "confusion_matrix": [
+        [
+          110,
+          12
+        ],
+        [
+          7,
+          7
+        ]
+      ],
+      "inference_mean_ms": 9.429411764705882e-05,
+      "inference_p95_ms": 0.000125
+    },
+    "rf": {
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "false_positive_rate": 0.0,
+      "confusion_matrix": [
+        [
+          122,
+          0
+        ],
+        [
+          0,
+          14
+        ]
+      ],
+      "inference_mean_ms": 0.9395245588235294,
+      "inference_p95_ms": 0.97734375
+    },
+    "feature_importance": {
+      "packet_rate": 0.28549932733129646,
+      "byte_rate": 0.16696838328848976,
+      "mean_packet_bytes": 0.35034126347125566,
+      "is_icmp": 0.052635374224359294,
+      "is_tcp": 0.11148840937828303,
+      "is_udp": 0.033067242306315824
+    },
+    "dataset_sha256": "05d5767530f33b3c2c2724847c84d65373e950b569e07ce8d265d04832b87857"
+  },
+  "runs": [
+    {
+      "id": "icmp-off-00",
+      "scenario": "icmp",
+      "method": "off",
+      "seed": 900,
+      "baseline_mbps": 9.613335535733428,
+      "during_attack_mbps": 9.35355397383181,
+      "after_attack_mbps": 9.676548091166541,
+      "post_rule_mbps": null,
+      "detection_latency_s": null,
+      "rule_ack_latency_s": null,
+      "drop_observed_latency_s": null,
+      "false_blocks": 0,
+      "wrong_target_blocks": 0,
+      "out_of_window_blocks": 0,
+      "drop_confirmed": false,
+      "openflow_errors": 0
+    },
+    {
+      "id": "icmp-off-01",
+      "scenario": "icmp",
+      "method": "off",
+      "seed": 901,
+      "baseline_mbps": 9.614086360889265,
+      "during_attack_mbps": 9.349838694400987,
+      "after_attack_mbps": 9.696134477959559,
+      "post_rule_mbps": null,
+      "detection_latency_s": null,
+      "rule_ack_latency_s": null,
+      "drop_observed_latency_s": null,
+      "false_blocks": 0,
+      "wrong_target_blocks": 0,
+      "out_of_window_blocks": 0,
+      "drop_confirmed": false,
+      "openflow_errors": 0
+    },
+    {
+      "id": "icmp-rf-00",
+      "scenario": "icmp",
+      "method": "rf",
+      "seed": 900,
+      "baseline_mbps": 9.437201170138087,
+      "during_attack_mbps": 9.523744394237234,
+      "after_attack_mbps": 9.436479494176686,
+      "post_rule_mbps": 9.532424881118864,
+      "detection_latency_s": 1.859370470046997,
+      "rule_ack_latency_s": 0.004524707794189453,
+      "drop_observed_latency_s": 2.8556220531463623,
+      "false_blocks": 0,
+      "wrong_target_blocks": 0,
+      "out_of_window_blocks": 0,
+      "drop_confirmed": true,
+      "openflow_errors": 0
+    },
+    {
+      "id": "icmp-rf-01",
+      "scenario": "icmp",
+      "method": "rf",
+      "seed": 901,
+      "baseline_mbps": 9.442660169170379,
+      "during_attack_mbps": 9.527342814427618,
+      "after_attack_mbps": 9.684801952627446,
+      "post_rule_mbps": 9.536785598802302,
+      "detection_latency_s": 1.936816692352295,
+      "rule_ack_latency_s": 0.0037300586700439453,
+      "drop_observed_latency_s": 2.9463911056518555,
+      "false_blocks": 1,
+      "wrong_target_blocks": 0,
+      "out_of_window_blocks": 1,
+      "drop_confirmed": true,
+      "openflow_errors": 0
+    },
+    {
+      "id": "icmp-threshold-00",
+      "scenario": "icmp",
+      "method": "threshold",
+      "seed": 900,
+      "baseline_mbps": 9.438356375078127,
+      "during_attack_mbps": 9.349496159137749,
+      "after_attack_mbps": 9.696216925351647,
+      "post_rule_mbps": null,
+      "detection_latency_s": null,
+      "rule_ack_latency_s": null,
+      "drop_observed_latency_s": null,
+      "false_blocks": 0,
+      "wrong_target_blocks": 0,
+      "out_of_window_blocks": 0,
+      "drop_confirmed": false,
+      "openflow_errors": 0
+    },
+    {
+      "id": "icmp-threshold-01",
+      "scenario": "icmp",
+      "method": "threshold",
+      "seed": 901,
+      "baseline_mbps": 3.1417447627967685,
+      "during_attack_mbps": 0.045130769884885825,
+      "after_attack_mbps": 9.699425030882281,
+      "post_rule_mbps": null,
+      "detection_latency_s": null,
+      "rule_ack_latency_s": null,
+      "drop_observed_latency_s": null,
+      "false_blocks": 1,
+      "wrong_target_blocks": 1,
+      "out_of_window_blocks": 0,
+      "drop_confirmed": false,
+      "openflow_errors": 0
+    },
+    {
+      "id": "normal-off-00",
+      "scenario": "normal",
+      "method": "off",
+      "seed": 900,
+      "baseline_mbps": 9.433199768726965,
+      "during_attack_mbps": 3.9422324849607873,
+      "after_attack_mbps": 9.437003489756679,
+      "post_rule_mbps": null,
+      "detection_latency_s": null,
+      "rule_ack_latency_s": null,
+      "drop_observed_latency_s": null,
+      "false_blocks": 0,
+      "wrong_target_blocks": 0,
+      "out_of_window_blocks": 0,
+      "drop_confirmed": null,
+      "openflow_errors": 0
+    },
+    {
+      "id": "normal-off-01",
+      "scenario": "normal",
+      "method": "off",
+      "seed": 901,
+      "baseline_mbps": 9.436515750466048,
+      "during_attack_mbps": 0.8599551551357529,
+      "after_attack_mbps": 9.44605057643157,
+      "post_rule_mbps": null,
+      "detection_latency_s": null,
+      "rule_ack_latency_s": null,
+      "drop_observed_latency_s": null,
+      "false_blocks": 0,
+      "wrong_target_blocks": 0,
+      "out_of_window_blocks": 0,
+      "drop_confirmed": null,
+      "openflow_errors": 0
+    },
+    {
+      "id": "normal-rf-00",
+      "scenario": "normal",
+      "method": "rf",
+      "seed": 900,
+      "baseline_mbps": 9.431238190589413,
+      "during_attack_mbps": 4.033088041136021,
+      "after_attack_mbps": 9.441292112685584,
+      "post_rule_mbps": null,
+      "detection_latency_s": null,
+      "rule_ack_latency_s": null,
+      "drop_observed_latency_s": null,
+      "false_blocks": 0,
+      "wrong_target_blocks": 0,
+      "out_of_window_blocks": 0,
+      "drop_confirmed": null,
+      "openflow_errors": 0
+    },
+    {
+      "id": "normal-rf-01",
+      "scenario": "normal",
+      "method": "rf",
+      "seed": 901,
+      "baseline_mbps": 9.434468980889006,
+      "during_attack_mbps": 0.714230285083929,
+      "after_attack_mbps": 9.43521549550375,
+      "post_rule_mbps": null,
+      "detection_latency_s": null,
+      "rule_ack_latency_s": null,
+      "drop_observed_latency_s": null,
+      "false_blocks": 0,
+      "wrong_target_blocks": 0,
+      "out_of_window_blocks": 0,
+      "drop_confirmed": null,
+      "openflow_errors": 0
+    },
+    {
+      "id": "normal-threshold-00",
+      "scenario": "normal",
+      "method": "threshold",
+      "seed": 900,
+      "baseline_mbps": 9.431760246376875,
+      "during_attack_mbps": 8.741260697694393,
+      "after_attack_mbps": 9.438202594183023,
+      "post_rule_mbps": null,
+      "detection_latency_s": null,
+      "rule_ack_latency_s": null,
+      "drop_observed_latency_s": null,
+      "false_blocks": 2,
+      "wrong_target_blocks": 2,
+      "out_of_window_blocks": 0,
+      "drop_confirmed": null,
+      "openflow_errors": 0
+    },
+    {
+      "id": "normal-threshold-01",
+      "scenario": "normal",
+      "method": "threshold",
+      "seed": 901,
+      "baseline_mbps": 3.316179575802873,
+      "during_attack_mbps": 0.03337223977563176,
+      "after_attack_mbps": 9.393007217944053,
+      "post_rule_mbps": null,
+      "detection_latency_s": null,
+      "rule_ack_latency_s": null,
+      "drop_observed_latency_s": null,
+      "false_blocks": 3,
+      "wrong_target_blocks": 3,
+      "out_of_window_blocks": 0,
+      "drop_confirmed": null,
+      "openflow_errors": 0
+    },
+    {
+      "id": "udp-off-00",
+      "scenario": "udp",
+      "method": "off",
+      "seed": 900,
+      "baseline_mbps": 9.43790539556108,
+      "during_attack_mbps": 0.9769157942802454,
+      "after_attack_mbps": 9.70921004498568,
+      "post_rule_mbps": null,
+      "detection_latency_s": null,
+      "rule_ack_latency_s": null,
+      "drop_observed_latency_s": null,
+      "false_blocks": 0,
+      "wrong_target_blocks": 0,
+      "out_of_window_blocks": 0,
+      "drop_confirmed": false,
+      "openflow_errors": 0
+    },
+    {
+      "id": "udp-off-01",
+      "scenario": "udp",
+      "method": "off",
+      "seed": 901,
+      "baseline_mbps": 9.437652894480971,
+      "during_attack_mbps": 0.9607091128322709,
+      "after_attack_mbps": 9.385601772798838,
+      "post_rule_mbps": null,
+      "detection_latency_s": null,
+      "rule_ack_latency_s": null,
+      "drop_observed_latency_s": null,
+      "false_blocks": 0,
+      "wrong_target_blocks": 0,
+      "out_of_window_blocks": 0,
+      "drop_confirmed": false,
+      "openflow_errors": 0
+    },
+    {
+      "id": "udp-rf-00",
+      "scenario": "udp",
+      "method": "rf",
+      "seed": 900,
+      "baseline_mbps": 9.428109349515298,
+      "during_attack_mbps": 8.302865082687704,
+      "after_attack_mbps": 9.704348908293255,
+      "post_rule_mbps": 8.192814382523983,
+      "detection_latency_s": 2.0549798011779785,
+      "rule_ack_latency_s": 0.001178741455078125,
+      "drop_observed_latency_s": 3.070869207382202,
+      "false_blocks": 1,
+      "wrong_target_blocks": 0,
+      "out_of_window_blocks": 1,
+      "drop_confirmed": true,
+      "openflow_errors": 0
+    },
+    {
+      "id": "udp-rf-01",
+      "scenario": "udp",
+      "method": "rf",
+      "seed": 901,
+      "baseline_mbps": 9.605779939037594,
+      "during_attack_mbps": 8.417326315471042,
+      "after_attack_mbps": 9.670877045431592,
+      "post_rule_mbps": 8.416285525438797,
+      "detection_latency_s": 2.011331558227539,
+      "rule_ack_latency_s": 0.0013799667358398438,
+      "drop_observed_latency_s": 2.946392297744751,
+      "false_blocks": 1,
+      "wrong_target_blocks": 0,
+      "out_of_window_blocks": 1,
+      "drop_confirmed": true,
+      "openflow_errors": 0
+    },
+    {
+      "id": "udp-threshold-00",
+      "scenario": "udp",
+      "method": "threshold",
+      "seed": 900,
+      "baseline_mbps": 9.428058267123948,
+      "during_attack_mbps": 8.391779436951353,
+      "after_attack_mbps": 9.702482040436262,
+      "post_rule_mbps": 8.296143815475563,
+      "detection_latency_s": 1.9724128246307373,
+      "rule_ack_latency_s": 0.002814054489135742,
+      "drop_observed_latency_s": 2.9782662391662598,
+      "false_blocks": 0,
+      "wrong_target_blocks": 0,
+      "out_of_window_blocks": 0,
+      "drop_confirmed": true,
+      "openflow_errors": 0
+    },
+    {
+      "id": "udp-threshold-01",
+      "scenario": "udp",
+      "method": "threshold",
+      "seed": 901,
+      "baseline_mbps": 9.433789073228498,
+      "during_attack_mbps": 8.304171321916769,
+      "after_attack_mbps": 9.441234416538723,
+      "post_rule_mbps": 8.210540028532566,
+      "detection_latency_s": 1.943455696105957,
+      "rule_ack_latency_s": 0.004130125045776367,
+      "drop_observed_latency_s": 2.9472603797912598,
+      "false_blocks": 0,
+      "wrong_target_blocks": 0,
+      "out_of_window_blocks": 0,
+      "drop_confirmed": true,
+      "openflow_errors": 0
+    }
+  ],
+  "groups": [
+    {
+      "scenario": "normal",
+      "method": "off",
+      "repeats": 2,
+      "drop_confirmed_runs": 0,
+      "baseline_mbps": {
+        "mean": 9.434857759596508,
+        "std": 0.002344753173996732,
+        "count": 2
+      },
+      "during_attack_mbps": {
+        "mean": 2.40109382004827,
+        "std": 2.1794992014168466,
+        "count": 2
+      },
+      "after_attack_mbps": {
+        "mean": 9.441527033094125,
+        "std": 0.006397256337798557,
+        "count": 2
+      },
+      "detection_latency_s": {
+        "mean": null,
+        "std": null,
+        "count": 0
+      },
+      "drop_observed_latency_s": {
+        "mean": null,
+        "std": null,
+        "count": 0
+      },
+      "false_blocks": {
+        "mean": 0,
+        "std": 0.0,
+        "count": 2
+      }
+    },
+    {
+      "scenario": "normal",
+      "method": "threshold",
+      "repeats": 2,
+      "drop_confirmed_runs": 0,
+      "baseline_mbps": {
+        "mean": 6.373969911089874,
+        "std": 4.32436856305625,
+        "count": 2
+      },
+      "during_attack_mbps": {
+        "mean": 4.387316468735013,
+        "std": 6.157406978410425,
+        "count": 2
+      },
+      "after_attack_mbps": {
+        "mean": 9.415604906063539,
+        "std": 0.03195795701685326,
+        "count": 2
+      },
+      "detection_latency_s": {
+        "mean": null,
+        "std": null,
+        "count": 0
+      },
+      "drop_observed_latency_s": {
+        "mean": null,
+        "std": null,
+        "count": 0
+      },
+      "false_blocks": {
+        "mean": 2.5,
+        "std": 0.7071067811865476,
+        "count": 2
+      }
+    },
+    {
+      "scenario": "normal",
+      "method": "rf",
+      "repeats": 2,
+      "drop_confirmed_runs": 0,
+      "baseline_mbps": {
+        "mean": 9.43285358573921,
+        "std": 0.002284513729434046,
+        "count": 2
+      },
+      "during_attack_mbps": {
+        "mean": 2.3736591631099753,
+        "std": 2.3467868250980026,
+        "count": 2
+      },
+      "after_attack_mbps": {
+        "mean": 9.438253804094668,
+        "std": 0.004296817215950019,
+        "count": 2
+      },
+      "detection_latency_s": {
+        "mean": null,
+        "std": null,
+        "count": 0
+      },
+      "drop_observed_latency_s": {
+        "mean": null,
+        "std": null,
+        "count": 0
+      },
+      "false_blocks": {
+        "mean": 0,
+        "std": 0.0,
+        "count": 2
+      }
+    },
+    {
+      "scenario": "icmp",
+      "method": "off",
+      "repeats": 2,
+      "drop_confirmed_runs": 0,
+      "baseline_mbps": {
+        "mean": 9.613710948311347,
+        "std": 0.0005309135591778035,
+        "count": 2
+      },
+      "during_attack_mbps": {
+        "mean": 9.351696334116397,
+        "std": 0.002627099279537882,
+        "count": 2
+      },
+      "after_attack_mbps": {
+        "mean": 9.68634128456305,
+        "std": 0.013849666920285306,
+        "count": 2
+      },
+      "detection_latency_s": {
+        "mean": null,
+        "std": null,
+        "count": 0
+      },
+      "drop_observed_latency_s": {
+        "mean": null,
+        "std": null,
+        "count": 0
+      },
+      "false_blocks": {
+        "mean": 0,
+        "std": 0.0,
+        "count": 2
+      }
+    },
+    {
+      "scenario": "icmp",
+      "method": "threshold",
+      "repeats": 2,
+      "drop_confirmed_runs": 0,
+      "baseline_mbps": {
+        "mean": 6.290050568937448,
+        "std": 4.452376769542109,
+        "count": 2
+      },
+      "during_attack_mbps": {
+        "mean": 4.697313464511317,
+        "std": 6.57917986137811,
+        "count": 2
+      },
+      "after_attack_mbps": {
+        "mean": 9.697820978116965,
+        "std": 0.0022684731754732887,
+        "count": 2
+      },
+      "detection_latency_s": {
+        "mean": null,
+        "std": null,
+        "count": 0
+      },
+      "drop_observed_latency_s": {
+        "mean": null,
+        "std": null,
+        "count": 0
+      },
+      "false_blocks": {
+        "mean": 0.5,
+        "std": 0.7071067811865476,
+        "count": 2
+      }
+    },
+    {
+      "scenario": "icmp",
+      "method": "rf",
+      "repeats": 2,
+      "drop_confirmed_runs": 2,
+      "baseline_mbps": {
+        "mean": 9.439930669654233,
+        "std": 0.0038600952342247646,
+        "count": 2
+      },
+      "during_attack_mbps": {
+        "mean": 9.525543604332427,
+        "std": 0.002544467318179137,
+        "count": 2
+      },
+      "after_attack_mbps": {
+        "mean": 9.560640723402066,
+        "std": 0.17559049429144705,
+        "count": 2
+      },
+      "detection_latency_s": {
+        "mean": 1.898093581199646,
+        "std": 0.05476274896935696,
+        "count": 2
+      },
+      "drop_observed_latency_s": {
+        "mean": 2.901006579399109,
+        "std": 0.064183412548512,
+        "count": 2
+      },
+      "false_blocks": {
+        "mean": 0.5,
+        "std": 0.7071067811865476,
+        "count": 2
+      }
+    },
+    {
+      "scenario": "udp",
+      "method": "off",
+      "repeats": 2,
+      "drop_confirmed_runs": 0,
+      "baseline_mbps": {
+        "mean": 9.437779145021025,
+        "std": 0.00017854522600175974,
+        "count": 2
+      },
+      "during_attack_mbps": {
+        "mean": 0.9688124535562581,
+        "std": 0.011459854352393018,
+        "count": 2
+      },
+      "after_attack_mbps": {
+        "mean": 9.547405908892259,
+        "std": 0.22882560371137806,
+        "count": 2
+      },
+      "detection_latency_s": {
+        "mean": null,
+        "std": null,
+        "count": 0
+      },
+      "drop_observed_latency_s": {
+        "mean": null,
+        "std": null,
+        "count": 0
+      },
+      "false_blocks": {
+        "mean": 0,
+        "std": 0.0,
+        "count": 2
+      }
+    },
+    {
+      "scenario": "udp",
+      "method": "threshold",
+      "repeats": 2,
+      "drop_confirmed_runs": 2,
+      "baseline_mbps": {
+        "mean": 9.430923670176224,
+        "std": 0.004052291858192576,
+        "count": 2
+      },
+      "during_attack_mbps": {
+        "mean": 8.347975379434061,
+        "std": 0.061948292227925465,
+        "count": 2
+      },
+      "after_attack_mbps": {
+        "mean": 9.571858228487493,
+        "std": 0.18472996642682254,
+        "count": 2
+      },
+      "detection_latency_s": {
+        "mean": 1.9579342603683472,
+        "std": 0.02047578194356254,
+        "count": 2
+      },
+      "drop_observed_latency_s": {
+        "mean": 2.9627633094787598,
+        "std": 0.02192445342057899,
+        "count": 2
+      },
+      "false_blocks": {
+        "mean": 0,
+        "std": 0.0,
+        "count": 2
+      }
+    },
+    {
+      "scenario": "udp",
+      "method": "rf",
+      "repeats": 2,
+      "drop_confirmed_runs": 2,
+      "baseline_mbps": {
+        "mean": 9.516944644276446,
+        "std": 0.1256320786686276,
+        "count": 2
+      },
+      "during_attack_mbps": {
+        "mean": 8.360095699079373,
+        "std": 0.08093631388407016,
+        "count": 2
+      },
+      "after_attack_mbps": {
+        "mean": 9.687612976862424,
+        "std": 0.023668181208428406,
+        "count": 2
+      },
+      "detection_latency_s": {
+        "mean": 2.033155679702759,
+        "std": 0.030863968577133655,
+        "count": 2
+      },
+      "drop_observed_latency_s": {
+        "mean": 3.0086307525634766,
+        "std": 0.08801846690578684,
+        "count": 2
+      },
+      "false_blocks": {
+        "mean": 1,
+        "std": 0.0,
+        "count": 2
+      }
+    }
+  ]
+}

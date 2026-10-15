@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>SDN Lab · 智能网络异常检测</title><link rel="stylesheet" href="/style.css"></head>
+<body><main>
+<header><div class="brand"><span class="mark">N</span><div><p class="eyebrow">COMPUTER NETWORKS / COURSE PROJECT</p><h1>智能网络异常检测与动态防御</h1></div></div><span class="source">● 真实 Mininet 实验</span></header>
+<section class="toolbar"><div><label for="run">实验记录</label><select id="run"><option value="">正在读取实验记录…</option></select></div><button id="refresh">刷新记录</button><span id="status">等待数据</span></section>
+<section id="empty" class="empty" hidden><h2>网络实验尚未开始</h2><p>完成 Linux 环境安装后运行采集或演示脚本，日志会自动出现在这里。此页面不会生成模拟实验成绩。</p></section>
+<div id="content" hidden>
+<section class="metrics"><article><span>当前阶段</span><strong id="phase">—</strong><small id="clock">0.0 s</small></article><article><span>h3 放行包速率</span><strong id="pps">—</strong><small>packets / second</small></article><article><span>正常业务接收吞吐量</span><strong id="throughput">—</strong><small>Mbit/s · 服务端测量</small></article><article><span>防御状态</span><strong id="defense">—</strong><small id="method">—</small></article></section>
+<section class="grid"><article class="panel"><div class="panel-title"><h2>网络拓扑</h2><span>OpenFlow 1.3</span></div>
+<svg class="topology" viewBox="0 0 700 330" role="img" aria-label="三台客户端经过两台交换机访问服务器，控制器读取统计并下发规则">
+<g class="wires"><path d="M115 90H220V190H310M115 190H310M115 280H220V190M360 190H520M560 190H635"/><path class="control" d="M380 58V116H335V163M380 116H540V163"/></g>
+<g class="node"><rect x="265" y="10" width="230" height="58" rx="12"/><text x="380" y="36">OS-Ken 控制器 + 检测器</text><text class="sub" x="380" y="55">统计 → 判断 → 临时规则</text></g>
+<g class="node"><rect x="15" y="60" width="115" height="57" rx="10"/><text x="72" y="83">h1 正常业务</text><text class="sub" x="72" y="102">TCP / iperf3</text></g>
+<g class="node"><rect x="15" y="162" width="115" height="57" rx="10"/><text x="72" y="185">h2 正常探测</text><text class="sub" x="72" y="204">ICMP / ping</text></g>
+<g class="node" id="attack-node"><rect x="15" y="251" width="115" height="57" rx="10"/><text x="72" y="274">h3 场景流量</text><text class="sub" x="72" y="294">UDP / ICMP</text></g>
+<g class="node"><rect x="292" y="164" width="84" height="54" rx="10"/><text x="334" y="187">s1</text><text class="sub" x="334" y="207">采集 / 丢弃</text></g>
+<g class="node"><rect x="502" y="164" width="77" height="54" rx="10"/><text x="540" y="187">s2</text><text class="sub" x="540" y="207">转发</text></g>
+<g class="node"><rect x="610" y="161" width="83" height="60" rx="10"/><text x="651" y="187">server</text><text class="sub" x="651" y="207">10.0.0.10</text></g>
+<text class="link-label" x="440" y="176">10 Mbit/s 瓶颈</text><text class="hint" x="410" y="280" id="topology-note">控制器每秒采集一次统计</text></svg>
+<div class="playback"><button id="play">▶ 回放</button><input id="timeline" type="range" min="0" max="30" step="0.1" value="0" aria-label="实验时间轴"><span id="elapsed">0 / 30 s</span></div></article>
+<article class="panel"><div class="panel-title"><h2>流量与业务恢复</h2><span>Mbit/s</span></div><div class="legend"><span class="green">h1 放行</span><span class="amber">h3 放行</span><span class="blue">h1 业务接收</span></div><canvas id="chart" aria-label="规则放行流量与接收吞吐量时间曲线"></canvas><p class="muted">阴影为场景流量持续时间。接收吞吐量在本轮结束后写入；回放时可观察场景停止前的业务恢复。</p></article></section>
+<section class="grid lower"><article class="panel"><div class="panel-title"><h2>检测与控制事件</h2><span id="event-count">0 条</span></div><div id="events" class="events"></div></article><article class="panel"><div class="panel-title"><h2>对照实验</h2><span>多轮均值</span></div><div class="table-scroll"><table><thead><tr><th>场景</th><th>方法</th><th>场景期吞吐量</th><th>误封/场景外次数</th></tr></thead><tbody id="comparison"></tbody></table></div><p class="muted">次数为多轮均值，包含非目标封禁与场景结束后的延迟动作；具体分类见实验报告。</p></article></section>
+</div><footer>检测 → 决策 → 网络控制 · 所有图表来自日志；缺失测量显示为“未测得”</footer>
+</main><script src="/app.js"></script></body></html>

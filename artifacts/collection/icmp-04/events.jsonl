@@ -1,0 +1,3 @@
+{"time": 1790062399.6730022, "kind": "switch_disconnected", "dpid": null}
+{"time": 1790062399.74359, "kind": "switch_connected", "dpid": 1}
+{"time": 1790062399.7519746, "kind": "switch_connected", "dpid": 2}

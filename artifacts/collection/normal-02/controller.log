@@ -1,0 +1,7 @@
+2026-09-22 15:30:59,378 INFO loading app sdn_defense.controller
+2026-09-22 15:30:59,379 INFO loading app os_ken.controller.ofp_handler
+2026-09-22 15:30:59,380 INFO instantiating app sdn_defense.controller of DefenseController
+2026-09-22 15:30:59,380 INFO instantiating app os_ken.controller.ofp_handler of OFPHandler
+2026-09-22 15:30:59,495 INFO switch_disconnected {'dpid': None}
+2026-09-22 15:30:59,565 INFO switch_connected {'dpid': 1}
+2026-09-22 15:30:59,573 INFO switch_connected {'dpid': 2}

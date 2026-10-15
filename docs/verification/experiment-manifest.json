@@ -1,0 +1,14 @@
+{
+  "recorded_at": "2026-09-22T23:16:12.534232+08:00",
+  "purpose": "闭环对照实验开始后记录；之后不根据对照结果修改模型或流量参数。",
+  "sha256": {
+    "sdn_defense/core.py": "e93c3255c651f65f978ba5918916f222a5c9566e7a93dddbf4cd5c58a382d5f8",
+    "sdn_defense/controller.py": "1ee34cbc791d4455aca3b8e2007ac89ad69e914faa247213bf393a151d3e36ab",
+    "sdn_defense/lab.py": "dc45c1ad306be3237574c85cc86b01e569728125f1a506e8c5e324fe40cc9597",
+    "sdn_defense/traffic.py": "24ccb4b44bca72592e34a01ab31659e75f99a6c4f5dd7720b2557f230de4d0ac",
+    "sdn_defense/train.py": "7ae49c49ce7e59c85d037c038573a940d75bc8a49e720db64869d746db2d469c",
+    "sdn_defense/experiment.py": "dc2ecc8829fe261b978fe6401db2ebcf0f60b15de80a990d616182ef30dc3e9d",
+    "models/random_forest.joblib": "e122377a54e44e9caea5e64b743367dd0a35fe5c49f5752d2c43a8f768d05598",
+    "models/dataset.csv": "05d5767530f33b3c2c2724847c84d65373e950b569e07ce8d265d04832b87857"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "id": "udp-threshold-02",
+  "source": "real-mininet",
+  "scenario": "udp",
+  "method": "threshold",
+  "seed": 42,
+  "duration": 26,
+  "bottleneck_mbps": 10,
+  "poll_seconds": 1,
+  "status": "completed",
+  "traffic": {
+    "pps": 6119,
+    "payload_bytes": 128,
+    "ping_interval": 0.0005
+  },
+  "started": 1790062095.3124616,
+  "scenario_started": 1790062102.0770745,
+  "scenario_ended": 1790062115.8520958,
+  "ended": 1790062121.8573532
+}

@@ -1,0 +1,11 @@
+.venv/
+.venv-linux/
+__pycache__/
+.pytest_cache/
+*.pyc
+runtime/
+.DS_Store
+.journal.lock
+.env
+.env.*
+!.env.example

@@ -1,0 +1,18 @@
+{
+  "id": "udp-threshold-01",
+  "source": "real-mininet",
+  "scenario": "udp",
+  "method": "threshold",
+  "seed": 42,
+  "duration": 26,
+  "bottleneck_mbps": 10,
+  "poll_seconds": 1,
+  "status": "failed",
+  "traffic": {
+    "pps": 6119,
+    "payload_bytes": 128,
+    "ping_interval": 0.0005
+  },
+  "error": "控制器提前退出，请查看 controller.log",
+  "ended": 1790061846.1420739
+}

@@ -1,0 +1,6 @@
+{"time": 1790090198.7411113, "kind": "switch_connected", "dpid": 1}
+{"time": 1790090198.750082, "kind": "switch_connected", "dpid": 2}
+{"time": 1790090202.582634, "kind": "block_requested", "src": "10.0.0.1", "protocol": 6, "score": 1.0}
+{"time": 1790090202.5950527, "kind": "rule_ack", "src": "10.0.0.1", "protocol": 6, "seconds": 10}
+{"time": 1790090203.5952644, "kind": "drop_observed", "src": "10.0.0.1", "protocol": 6, "dropped_packets": 160}
+{"time": 1790090212.6469173, "kind": "rule_expired", "src": "10.0.0.1", "protocol": 6, "dropped_packets": 165}

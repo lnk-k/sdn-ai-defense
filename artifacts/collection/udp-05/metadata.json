@@ -1,0 +1,21 @@
+{
+  "id": "udp-05",
+  "source": "real-mininet",
+  "scenario": "udp",
+  "method": "off",
+  "seed": 105,
+  "duration": 18,
+  "bottleneck_mbps": 10,
+  "poll_seconds": 1,
+  "status": "completed",
+  "traffic": {
+    "pps": 7096,
+    "payload_bytes": 256,
+    "ping_interval": 0.002
+  },
+  "started": 1790062480.6459367,
+  "scenario_started": 1790062484.6538348,
+  "scenario_ended": 1790062494.4201586,
+  "ended": 1790062499.3986332,
+  "split": "test"
+}

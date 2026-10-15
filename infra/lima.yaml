@@ -1,0 +1,14 @@
+minimumLimaVersion: 2.0.0
+base:
+  - template:_images/ubuntu-24.04
+vmType: vz
+cpus: 4
+memory: 4GiB
+disk: 20GiB
+mountType: virtiofs
+mounts:
+  - location: /Users/kk/Documents/ChatGPT/课程设计/sdn-ai-defense
+    writable: true
+containerd:
+  system: false
+  user: false

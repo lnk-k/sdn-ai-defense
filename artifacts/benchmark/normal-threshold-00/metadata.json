@@ -1,0 +1,20 @@
+{
+  "id": "normal-threshold-00",
+  "source": "real-mininet",
+  "scenario": "normal",
+  "method": "threshold",
+  "seed": 900,
+  "duration": 26,
+  "bottleneck_mbps": 10,
+  "poll_seconds": 1,
+  "status": "completed",
+  "traffic": {
+    "pps": 1478,
+    "payload_bytes": 512,
+    "ping_interval": 0.001
+  },
+  "started": 1790090171.094052,
+  "scenario_started": 1790090178.1047153,
+  "scenario_ended": 1790090192.1169765,
+  "ended": 1790090198.3607304
+}

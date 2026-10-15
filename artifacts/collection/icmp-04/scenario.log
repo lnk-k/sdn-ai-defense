@@ -1,0 +1,16 @@
+PING 10.0.0.10 (10.0.0.10) 128(156) bytes of data.
+ping: Warning: time of day goes back (-1 s), taking countermeasures
+ping: Warning: time of day goes back (-1 s), taking countermeasures
+ping: Warning: time of day goes back (-1 s), taking countermeasures
+ping: Warning: time of day goes back (-1 s), taking countermeasures
+ping: Warning: time of day goes back (-1 s), taking countermeasures
+ping: Warning: time of day goes back (-1 s), taking countermeasures
+ping: Warning: time of day goes back (-1 s), taking countermeasures
+ping: Warning: time of day goes back (-1 s), taking countermeasures
+ping: Warning: time of day goes back (-1 s), taking countermeasures
+ping: Warning: time of day goes back (-1 s), taking countermeasures
+ping: Warning: time of day goes back (-1 s), taking countermeasures
+
+--- 10.0.0.10 ping statistics ---
+1348 packets transmitted, 1328 received, 1.48368% packet loss, time 9761ms
+rtt min/avg/max/mdev = 0.000/73.782/101.930/11.941 ms, pipe 14

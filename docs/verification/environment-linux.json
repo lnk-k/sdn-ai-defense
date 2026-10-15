@@ -1,0 +1,40 @@
+{
+  "platform": "Linux-6.8.0-139-generic-aarch64-with-glibc2.39",
+  "commands": [
+    {
+      "command": [
+        "uname",
+        "-a"
+      ],
+      "output": "Linux lima-sdn-course 6.8.0-139-generic #139-Ubuntu SMP PREEMPT_DYNAMIC Sat Aug  1 03:32:48 UTC 2026 aarch64 aarch64 aarch64 GNU/Linux\n"
+    },
+    {
+      "command": [
+        "mn",
+        "--version"
+      ],
+      "output": "2.3.0\n"
+    },
+    {
+      "command": [
+        "ovs-vswitchd",
+        "--version"
+      ],
+      "output": "ovs-vswitchd (Open vSwitch) 3.3.9\n"
+    },
+    {
+      "command": [
+        "iperf3",
+        "--version"
+      ],
+      "output": "iperf 3.16 (cJSON 1.7.15)\nLinux lima-sdn-course 6.8.0-139-generic #139-Ubuntu SMP PREEMPT_DYNAMIC Sat Aug  1 03:32:48 UTC 2026 aarch64\nOptional features available: CPU affinity setting, IPv6 flow label, SCTP, TCP congestion algorithm setting, sendfile / zerocopy, socket pacing, authentication, bind to device, support IPv4 don't fragment, POSIX threads\n"
+    },
+    {
+      "command": [
+        "/Users/kk/Documents/ChatGPT/课程设计/sdn-ai-defense/.venv-linux/bin/python",
+        "--version"
+      ],
+      "output": "Python 3.12.3\n"
+    }
+  ]
+}

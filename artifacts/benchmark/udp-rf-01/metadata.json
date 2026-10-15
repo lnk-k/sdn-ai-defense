@@ -1,0 +1,20 @@
+{
+  "id": "udp-rf-01",
+  "source": "real-mininet",
+  "scenario": "udp",
+  "method": "rf",
+  "seed": 901,
+  "duration": 26,
+  "bottleneck_mbps": 10,
+  "poll_seconds": 1,
+  "status": "completed",
+  "traffic": {
+    "pps": 5266,
+    "payload_bytes": 256,
+    "ping_interval": 0.0005
+  },
+  "started": 1790090514.7017467,
+  "scenario_started": 1790090521.7129116,
+  "scenario_ended": 1790090535.516486,
+  "ended": 1790090541.7629263
+}

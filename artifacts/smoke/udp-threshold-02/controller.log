@@ -1,0 +1,14 @@
+2026-09-22 15:28:14,271 INFO loading app sdn_defense.controller
+2026-09-22 15:28:14,273 INFO loading app os_ken.controller.ofp_handler
+2026-09-22 15:28:14,273 INFO instantiating app sdn_defense.controller of DefenseController
+2026-09-22 15:28:14,274 INFO instantiating app os_ken.controller.ofp_handler of OFPHandler
+2026-09-22 15:28:14,425 INFO switch_connected {'dpid': 1}
+2026-09-22 15:28:14,436 INFO switch_connected {'dpid': 2}
+2026-09-22 15:28:24,079 INFO block_requested {'src': '10.0.0.3', 'protocol': 17, 'score': 1.0}
+2026-09-22 15:28:24,081 INFO rule_ack {'src': '10.0.0.3', 'protocol': 17, 'seconds': 10}
+2026-09-22 15:28:25,085 INFO drop_observed {'src': '10.0.0.3', 'protocol': 17, 'dropped_packets': 4760}
+2026-09-22 15:28:33,877 INFO rule_expired {'src': '10.0.0.3', 'protocol': 17, 'dropped_packets': 63060}
+2026-09-22 15:28:35,856 INFO block_requested {'src': '10.0.0.3', 'protocol': 17, 'score': 1.0}
+2026-09-22 15:28:35,858 INFO rule_ack {'src': '10.0.0.3', 'protocol': 17, 'seconds': 10}
+2026-09-22 15:28:36,861 INFO drop_observed {'src': '10.0.0.3', 'protocol': 17, 'dropped_packets': 2900}
+2026-09-22 15:28:41,913 INFO rule_expired {'src': '10.0.0.3', 'protocol': 17, 'dropped_packets': 2900}
