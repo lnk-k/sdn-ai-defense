@@ -121,3 +121,4 @@
 {"recorded_at": "2026-09-22T23:28:20+08:00", "stage": "交付整理", "message": "36 轮正式实验完成，12 项测试在 Mac 与 Linux 均通过；报告已并入实测表格和三幅结果图。正在打包源码、模型、原始证据和日志，排除虚拟环境与系统镜像。", "details": {"udp_off_mbps": 0.969, "udp_rf_mbps": 8.36, "rf_normal_scenario_blocks": 0, "rf_out_of_window_blocks": 3}}
 {"recorded_at": "2026-09-22T23:28:20+08:00", "stage": "交付", "message": "完成最终整理；交付包包含源码、已训练模型、36 轮真实实验、报告、原理说明和开发日志。", "details": {"archive": "SDN_AI_网络异常检测课设_完整交付.zip"}}
 {"recorded_at": "2026-10-15T22:12:23+08:00", "stage": "GitHub", "message": "已创建私有仓库 lnk-k/sdn-ai-defense，准备首次上传源码、模型、实验原始记录、报告和过程日志；排除虚拟环境、缓存、锁文件及环境变量文件。", "details": {}}
+{"recorded_at": "2026-10-15T22:13:30+08:00", "stage": "GitHub", "message": "首次上传成功：496 个项目文件已推送到私有仓库 https://github.com/lnk-k/sdn-ai-defense 的 main 分支，GitHub 已确认提交 8e4ffde66310020ef63ba106d9ef43ed2b307c88。", "details": {}}
